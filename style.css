@@ -1,0 +1,146 @@
+body {
+    font-family: "MS Sans Serif", Geneva, sans-serif;
+    background: #ece9e1 url("bg.jpe") center center / cover no-repeat;
+    color: #1b1b1b;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop {
+    width: min(560px, 94vw);
+}
+
+.window-shell {
+    background: rgba(245, 244, 242, 0.96);
+    border: 4px solid #f9f6f2;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.14);
+}
+
+.window-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    background: linear-gradient(180deg, #4e5e83 0%, #7a8eb8 100%);
+    color: #ffffff;
+    padding: 10px 14px;
+    border-bottom: 2px solid #aab0bc;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.window-title {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.95rem;
+}
+
+.window-controls {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.control {
+    width: 28px;
+    height: 22px;
+    border: 2px solid #7d7d7d;
+    background: #d1ced0;
+    color: #111;
+    font-weight: bold;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.window-body {
+    padding: 24px;
+    background: rgba(239, 237, 232, 0.98);
+}
+
+.verify-panel {
+    background: rgba(255, 255, 255, 0.96);
+    border: 2px solid #b9b4ae;
+    padding: 24px;
+}
+
+.verify-title {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #24375a;
+    font-size: 1.08rem;
+}
+
+.verify-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.verify-row label {
+    text-align: right;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    color: #2f3439;
+}
+
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #9f9a94;
+    background: #f8f6f2;
+    color: #20242c;
+    font-size: 0.95rem;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #b8b4ad;
+}
+
+#getPriceBtn {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: 2px solid #8e8a83;
+    background: #e7e4df;
+    font-weight: bold;
+    box-shadow: 2px 2px 0 #7d7872;
+    cursor: pointer;
+    color: #1b283c;
+}
+
+button:hover,
+button:focus {
+    background: #edeae8;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 0 #6f6b66;
+}
+
+#priceDisplay {
+    margin: 20px auto 0;
+    padding-top: 10px;
+    border-top: 2px solid #ada69f;
+    font-weight: bold;
+    color: #283651;
+    width: fit-content;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    .verify-row {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .verify-row label {
+        text-align: left;
+    }
+}
